@@ -34,7 +34,7 @@
              <div class="form-group row">
                  <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('UserName') }}</label>
                  <div class="col-md-6">
-                <input type="text" name="username" value={{ Auth::user()->name }} class="form-control"  required>
+                <input type="text" name="username" value={{ Auth::user()->name }} class="form-control" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+"  required>
                  </div>
                 @if ($errors->has('username'))
                     <span class="text-danger">{{ $errors->first('username') }}</span>
@@ -43,7 +43,7 @@
             <div class="form-group row">
                  <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('FirstName') }}</label>
                  <div class="col-md-6">
-                <input type="text" name="firstname" class="form-control" placeholder="firstname" required>
+                <input type="text" name="firstname" class="form-control" placeholder="firstname" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" required>
                  </div>
                 @if ($errors->has('firstname'))
                     <span class="text-danger">{{ $errors->first('firstname') }}</span>
@@ -52,7 +52,7 @@
             <div class="form-group row">
                  <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('LastName') }}</label>
                  <div class="col-md-6">
-                <input type="text" name="lastname" class="form-control" placeholder="lastname" required>
+                <input type="text" name="lastname" class="form-control" placeholder="lastname" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" required>
                  </div>
                 @if ($errors->has('lastname'))
                     <span class="text-danger">{{ $errors->first('lastname') }}</span>
@@ -70,7 +70,7 @@
              <div class="form-group row">
                  <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
                  <div class="col-md-6">
-                 <input type="text" name="role" class="form-control" placeholder="Role" required>
+                 <input type="text" name="role" class="form-control" placeholder="Role" pattern="[A-Za-z]+\s[A-Za-z]+" required>
                  </div>
                 @if ($errors->has('role'))
                     <span class="text-danger">{{ $errors->first('role') }}</span>
