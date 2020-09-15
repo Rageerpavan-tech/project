@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\profile;
+use App\Profile;
 
 class profilecontroller extends Controller
 {
@@ -50,7 +50,6 @@ class profilecontroller extends Controller
         $file->move('images/',$filename);
         $profile->image=$filename;
         }else{
-          return $request;
           $profile->image='';
         }
          $profile->save();
