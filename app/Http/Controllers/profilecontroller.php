@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Profile;
 
-class profilecontroller extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +15,8 @@ class profilecontroller extends Controller
      */
     public function index()
     {
+   
+        return view('profile');
     }
 
     /**

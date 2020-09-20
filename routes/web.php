@@ -20,4 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/profile','profileController@store');
+Route::post('/profile','ProfileController@store');
+Route::get('/profile','ProfileController@index');
+Route::get('/createposts','PostController@create');
+Route::post('/posts1','PostController@store');
+Route::get('/posts','PostController@index');
+Route::get('/viewpost/{id}','PostController@show');
+Route::post('/comments','CommentController@store');
